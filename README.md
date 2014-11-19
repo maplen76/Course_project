@@ -27,10 +27,10 @@ Create one R script called run_analysis.R that does the following.
 
 ## The repo includes the following files:
 
--run_analysis.R: R script to clean up the raw data set to get a tidy one
--CodeBook.md: information describing the data
--README.md: this file
--secData.txt: the output
+* run_analysis.R: R script to clean up the raw data set to get a tidy one
+* CodeBook.md: information describing the data
+* README.md: this file
+* secData.txt: the output
 
 ## How to creat tidy data set
 1. Clone this repository:

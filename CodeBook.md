@@ -1,4 +1,5 @@
 Clean up data
+=====================================
 
 ## Signals
 
@@ -40,8 +41,9 @@ The raw data sets are processed with run_analisys.R script to create a tidy data
 
 ### Merge training sets and test sets to create one data set
 
-Test and training data (X_train.txt, X_test.txt), subject ids (subject_train.txt, subject_test.txt) and activity ids (y_train.txt, y_test.txt) are merged to obtain a single data set. Variables are labelled with the names assigned by original collectors (features.txt).
-Also add a new column group to identify if the record is belong to training group or test group
+* Test and training data (X_train.txt, X_test.txt), subject ids (subject_train.txt, subject_test.txt) and activity ids (y_train.txt, y_test.txt) are merged to obtain a single data set. 
+* Variables are labelled with the names assigned by original collectors (features.txt)
+* Also add a new column group to identify if the record is belong to training group or test group
 
 ### Extracts only the measurements on the mean and standard deviation for each measurement
 
@@ -51,22 +53,22 @@ Extract the mean (the column name contain "mean") and standard deviation (the co
 
 Add new column to describe the activity by merging the 2 data sets activity_labels.txt and y_train.txt (or y_test.txt)
 
-### Appropriately labels the data set with descriptive variable names. 
+### Appropriately labels the data set with descriptive variable names
 
-Remove the parentheses
-Describe the time domain signals by using TimeDomain instead of prefix "t"
-Describe the frequency domain signals by using FrequencyDomain instead of prefix "f"
-Transform the abbreviation "Acc" to Acceleration
-Transform the abbreviation "GyroJerk" to AngularAcceleration
-Transform the abbreviation "Gyro" to AngularSpeed
-Transform the abbreviation "std" to StandardDeviation
-'-XYZ' denote 3-axial signals in the X, Y and Z directions
+* Remove the parentheses
+* Describe the time domain signals by using TimeDomain instead of prefix "t"
+* Describe the frequency domain signals by using FrequencyDomain instead of prefix "f"
+* Transform the abbreviation "Acc" to Acceleration
+* Transform the abbreviation "GyroJerk" to AngularAcceleration
+* Transform the abbreviation "Gyro" to AngularSpeed
+* Transform the abbreviation "std" to StandardDeviation
+* '-XYZ' denote 3-axial signals in the X, Y and Z directions
 
 ### Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-Convert the Merged data into a molten data frame by calling the function melt in the package reshape2
-To get the  average of each variable for each activity and each subject by calling the function dcast
-Each line indicate the average value of variable for each subject and each activity
+1. Convert the Merged data into a molten data frame by calling the function melt in the package reshape2
+2. To get the  average of each variable for each activity and each subject by calling the function dcast
+3. Each line indicate the average value of variable for each subject and each activity
 
 
 
