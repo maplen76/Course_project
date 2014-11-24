@@ -3,7 +3,7 @@ u <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%2
 download.file(url = u)
 
 # unzip the file
-zipPath <- "D:/R/getdata_projectfiles_UCI HAR Dataset.zip"
+zipPath <- paste(getwd(),"/", "getdata_projectfiles_UCI HAR Dataset.zip", sep = "")
 unzip(zipfile = zipPath)
 
 # reading features
